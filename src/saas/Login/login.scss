@@ -1,6 +1,13 @@
 @import '../index.scss';
 
-.login-wrapper {
+
+
+
+
+
+
+
+.login-container {
   max-width: 1440px;
   width: 100%;
   margin: 50px auto 0 auto;
@@ -64,10 +71,10 @@
                         text-transform: uppercase; 
                     }
 
-                    .password__styles {
+                    .password-class {
                         display: flex; align-items: center; justify-content: space-between; padding: 0 18px; color: $gray-hard !important; border: 1px solid $gray-soft; border-radius: 5px; height: 50px; margin-bottom: 24px;
                     
-                        .input__styles { 
+                        .input-class { 
                             all: unset; width: 100%; 
                         }
 
@@ -81,5 +88,18 @@
         }
     }
 }
+
+
+@media screen and ( max-width: 1024px ){
+    .login-container { padding: 0 20px;}
+}
+
+@media screen and ( max-width: 767px ){
+    .login-area > svg { display: none;}
+    .login-area > div  { max-width: 100%; }
+    .login-area > div > h1 { font-size: 28px; }
+    .login-area > div > article { font-size: 16px; padding: 15px 0 30px 0;}
+}
+
 
 

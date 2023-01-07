@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import LogoIcon from '../constants/LogoIcon'
 import LoginIcon from '../constants/LoginIcon'
-// import '../saas/Login/login.scss'
-import { useNavigate } from 'react-router-dom'
+import '../saas/Login/login.scss'
+// import { useNavigate } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast';
 import InputField from '../components/constants/InputField'
 import Button from '../components/constants/Button'
@@ -10,7 +10,7 @@ import Button from '../components/constants/Button'
 
 export default function Login() {
 
-    const router = useNavigate();
+    // const router = useNavigate();
     const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -42,7 +42,7 @@ export default function Login() {
         }
         // Handle Login
 
-        router('/dashboard')
+        // router('/dashboard')
     }
 
 
@@ -61,6 +61,8 @@ export default function Login() {
                 value={formData.email}
                 type='email'
                 handleChange={(event) => handleChange(event)}
+                placeholder={'Email'}
+              inputClass={'input-class'}
                 />
                 <InputField 
                 name={'password'}
@@ -71,7 +73,7 @@ export default function Login() {
                 inputClass={'input-class'}
                 variable_x={!showPassword ? 'SHOW' : 'HIDE'}
                 onClick={handleVisibility}
-                component__wrap={'password__styles'}
+                component__wrap={'password-class'}
                 />
                 
                 <div className='forgot-password'>
