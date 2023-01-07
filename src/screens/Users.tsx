@@ -7,10 +7,11 @@ import { useAppDispatch, useAppSelector } from '../hooks/hooks';
 import '../saas/Users/users.scss'
 import { getAllUsers } from '../functions/usersSlice';
 import { getYearsBetween } from '../constants/utils/helpers';
-import UsersCard from '../components/constants/UsersCard';
 import Loading from '../components/constants/Loading';
 
-
+const UsersCard = lazy(() => import('../components/constants/UsersCard'));
+const UsersTable = lazy(() => import('../components/UsersTable'));
+ 
 export default function Users() {
     const dispatch = useAppDispatch()
   const { filteredUsers, isError, isLoading, message } = useAppSelector((state: any) => state.users)
