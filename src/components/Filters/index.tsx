@@ -1,15 +1,15 @@
-import InputField from "./constants/InputField";
-import Button from "./constants/Button";
-import CaretDownIcon from "../constants/icons/CaretDownIcon";
-import Listener from "../hooks/Listener";
-import { useRef, useState } from 'react';
-import '../saas/Filters/filters.scss';
-import { useAppDispatch } from "../hooks/hooks";
-import { motion } from 'framer-motion';
-import { getAllUsers, filterByUsername, filterByEmail, filterByDateJoined, filterByPhoneNumber, filterByOrgName,
-    filterByActiveStatus, filterByPendingStatus, filterByInactveStatus, filterByBlacklistStatus 
-} from '../functions/usersSlice';
-import { characterLimit } from "../constants/utils/helpers";
+import Input from 'components/Shared/Input'
+import Button from 'components/Shared/Button/Index'
+import useOnClickOutside from 'hooks/useOnClickOutside'
+import { useRef, useState } from 'react'
+import '../Filters/filters.scss'
+import { useAppDispatch } from 'app/hooks'
+import { motion } from 'framer-motion'
+import {
+    getAllUsers, filterByUsername, filterByEmail, filterByDateJoined, filterByPhoneNumber, filterByOrgName,
+    filterByActiveStatus, filterByPendingStatus, filterByInactveStatus, filterByBlacklistStatus
+} from 'features/users/usersSlice'
+import CaretDownIcon from 'components/Icons/CaretDownIcon'
 
 
 interface IFilter {
@@ -17,10 +17,10 @@ interface IFilter {
     currentUsers: any,
 }
 
-const Filters = ({ setIsFilterModal, currentUsers }: IFilter) => {
+const Index = ({ setIsFilterModal, currentUsers }: IFilter) => {
     const filterModalRef = useRef<HTMLDivElement>(null);
     const clickOutsidehandler = () => { setIsFilterModal(false) };
-    Listener(filterModalRef, clickOutsidehandler);
+    useOnClickOutside(filterModalRef, clickOutsidehandler);
     const [showDrop, setShowDrop] = useState<boolean>(false)
     const [showStatusDrop, setShoStatusDrop] = useState<boolean>(false)
     const [selected, setSelcted] = useState<string>('Select')
@@ -56,8 +56,8 @@ const Filters = ({ setIsFilterModal, currentUsers }: IFilter) => {
             initial={{ opacity: 0, translateX: -50, zIndex: 99 }}
             animate={{ opacity: 1, translateX: 0, zIndex: 99 }}
             transition={{ duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96], delay: 0.1 }}
-            ref={filterModalRef} className='filters-container'>
-            <label className='label-class'>{'Organisation'}</label>
+            ref={filterModalRef} className='filters__wrapper'>
+            <label className='label__class'>{'Organisation'}</label>
             <div className='dropbox'>
                 <div onClick={() => setShowDrop(!showDrop)} className='selected'>
                     <div>{selected}</div>
@@ -72,10 +72,10 @@ const Filters = ({ setIsFilterModal, currentUsers }: IFilter) => {
                     </div>
                 }
             </div>
-            <InputField label={'Username'} inputClass={'input-class'} labelClass={'label-class'} myRef={usernameRef} handleChange={filterByUsernameAction} />
-            <InputField label={'Email'} inputClass={'input-class'} labelClass={'label-class'} myRef={emailRef} handleChange={filterByEmailAction} />
-            <InputField type={'date'} label={'Date'} inputClass={'input-class'} labelClass={'label-class'} myRef={dateRef} handleChange={filterByDateJoinedAction} />
-            <InputField label={'Phone Number'} inputClass={'input-class'} labelClass={'label-class'} myRef={phoneRef} handleChange={filterByPhoneNumberAction} />
+            <Input label={'Username'} input__class={'input__class'} label__class={'label__class'} myRef={usernameRef} onHandleInputChange={filterByUsernameAction} />
+            <Input label={'Email'} input__class={'input__class'} label__class={'label__class'} myRef={emailRef} onHandleInputChange={filterByEmailAction} />
+            <Input type={'date'} label={'Date'} input__class={'input__class'} label__class={'label__class'} myRef={dateRef} onHandleInputChange={filterByDateJoinedAction} />
+            <Input label={'Phone Number'} input__class={'input__class'} label__class={'label__class'} myRef={phoneRef} onHandleInputChange={filterByPhoneNumberAction} />
             <div className='dropbox'>
                 <div onClick={() => setShoStatusDrop(!showStatusDrop)} className='selected'>
                     <div>{selectedd}</div>
@@ -91,11 +91,11 @@ const Filters = ({ setIsFilterModal, currentUsers }: IFilter) => {
                     </div>
                 }
             </div>
-            <div className='filter-cta'>
-                <Button background='reset-styles' children={'Reset'} onClick={resetAction} />
+            <div className='filter__cta'>
+                <Button background='reset__styles' children={'Reset'} onClick={resetAction} />
             </div>
         </motion.span>
     )
 }
 
-export default Filters;
+export default Index;

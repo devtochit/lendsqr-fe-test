@@ -1,9 +1,8 @@
-import NextBtn from "../../constants/icons/NextBtn"
-import PrevBtn from "../../constants/icons/PrevBtn"
-import { getPaginationItems } from "../../functions/pagination"
-import PageLink from "./PageLink";
-import '../../saas/Pagination/pagination.scss'
-
+import NextBtn from 'components/Icons/NextBtn';
+import PrevBtn from 'components/Icons/PrevBtn';
+import { getPaginationItems } from '../Pagination/lib/pagination';
+import PageLink from './PageLink';
+import './Pagination.scss';
 
 export type Props = {
   currentPage: number;

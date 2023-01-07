@@ -1,6 +1,6 @@
 import { HTMLProps } from 'react';
 import cn from 'classnames';
-import '../../saas/Pagelink/pagelink.scss';
+import './PageLink.scss';
 
 export type Props = HTMLProps<HTMLAnchorElement> & { active?: boolean };
 
@@ -24,3 +24,4 @@ export default function PageLink({ className, active, disabled, children, ...oth
     </span>
   );
 }
+ 

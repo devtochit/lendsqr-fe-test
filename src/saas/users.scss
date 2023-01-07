@@ -1,10 +1,10 @@
-@import '../index.scss';
+@import '../saas/index-copy.scss';
 
 //utils
-.active-status { background:#39cd6316 ; color: #39CD62;}
-.pending-status { background:#e9b30018 ; color: #E9B200;}
-.inactive-status { background:#545f7d1a ; color: #545F7D;}
-.blacklisted-status { background:#e4033b18 ; color: #E4033B;}
+.active__status { background:#39cd6316 ; color: #39CD62;}
+.pending__status { background:#e9b30018 ; color: #E9B200;}
+.inactive__status { background:#545f7d1a ; color: #545F7D;}
+.blacklsted__status { background:#e4033b18 ; color: #E4033B;}
 
 .users__wrapper .heading { font-weight: normal; font-size: 24px; color: $navy-blue; font-weight: 500; padding-bottom: 40px; }
 .users__wrapper .cards__wrapper { display: flex; align-items: flex-start; justify-content: space-between; column-gap: 12px;}
@@ -18,7 +18,7 @@
 .table__wrapper .table__headings {padding: 16px 0 16px 16px; display: flex; align-items: flex-end; }
 .table__wrapper .status__btn { padding: 6px 10px; border-radius: 100px;}
 .table__wrapper .action__group { position: relative; cursor: pointer; padding-left: 60px;}
-.table__wrapper .action__prompt {position: absolute; z-index: 9; background: $white-color; top: 38px; right: 0; border: 1px solid $gray-soft; padding: 16px 0 16px 0; box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04); border-radius: 4px;}
+.table__wrapper .action__prompt {position: absolute; z-index: 9; background: $white__main; top: 38px; right: 0; border: 1px solid $gray-soft; padding: 16px 0 16px 0; box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04); border-radius: 4px;}
 .table__wrapper .action__prompt > a > div { display: flex; align-items: center; padding: 7px 43px 7px 25px; margin-bottom: 4px; cursor: pointer; transition: 0.3s; &:hover{ background: $gray-soft; transition: 0.3s;}}
 .table__wrapper .action__prompt > a { text-decoration: none; color: $gray-hard;}
 .table__wrapper .action__prompt > div { display: flex; align-items: center; padding: 7px 43px 7px 25px; margin-bottom: 4px; cursor: pointer; transition: 0.3s; &:hover{ background: $gray-soft; transition: 0.3s;}}

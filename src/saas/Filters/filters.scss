@@ -34,7 +34,7 @@
         box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04); 
         border-radius: 3px; 
         width: 100%; 
-        background: $white-main;
+        background: $white-color;
     
         p { 
             &:hover{ 
@@ -56,8 +56,8 @@
 .select-class { all: unset;  width: calc(100% - 17px); padding: 12px 18px 0 18px; color: $gray-hard !important; border: 1px solid $gray-soft; border-radius: 5px;  margin-top: 6px; margin-bottom: 24px; }
 .label-class {color: $gray-hard}
 .filter-cta { display: flex; align-items: center; column-gap: 14px;}
-.filter-cta .filter-styles { background: $cyan-main; color: $white-main; padding: 11px 0; }
-.filter-cta .reset-styles { background: $white-main; color: $navy-blue; padding: 11px 0; border: 1px solid $navy-blue }
+.filter-cta .filter-styles { background: $cyan-color; color: $white-color; padding: 11px 0; }
+.filter-cta .reset-styles { background: $white-color; color: $navy-blue; padding: 11px 0; border: 1px solid $navy-blue }
 
 
 @media screen and (max-width: 1023px) {

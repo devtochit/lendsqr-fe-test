@@ -1,0 +1,6 @@
+@import '../../../assets/styles/index.scss';
+
+.search__group { display: flex; align-items: center; box-sizing: border-box; justify-content: space-between; color: $gray-hard !important; border: 1px solid $gray-soft; border-radius: 8px; }
+.search__group > span { background: $cyan-main; padding:13px 21px 10px 21px; transition: 0.4s; border-top-right-radius: 8px; border-bottom-right-radius: 8px; margin: -1px; cursor: pointer; &:hover {opacity: 0.6; transition: 0.4s;}}
+.search__input_style { all: unset; padding: 0 6px; width: 100%;}
+.search__input_style::placeholder { font-size: 14px; opacity: 0.5;}

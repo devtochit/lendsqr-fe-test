@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.search__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #545F7D !important;
+  border: 1px solid #545F7D26;
+  border-radius: 8px;
+}
+
+.search__group > span {
+  background: #39CDCC;
+  padding: 13px 21px 10px 21px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: -1px;
+  cursor: pointer;
+}
+
+.search__group > span:hover {
+  opacity: 0.6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.search__input_style {
+  all: unset;
+  padding: 0 6px;
+  width: 100%;
+}
+
+.search__input_style::-webkit-input-placeholder {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.search__input_style:-ms-input-placeholder {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.search__input_style::-ms-input-placeholder {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.search__input_style::placeholder {
+  font-size: 14px;
+  opacity: 0.5;
+}
+/*# sourceMappingURL=searchbar.css.map */

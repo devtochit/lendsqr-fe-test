@@ -1,0 +1,36 @@
+@import 'assets/styles/index.scss';
+
+.nav__wrapper { background: $white-main; display: flex; align-items: center; padding: 20px 0; box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04); position: fixed; z-index: 9; top: 0; width: 100%;} 
+.nav__wrapper .logo_wrapper { max-width: 283px; width: 100%; padding-left: 30px;}
+.nav__wrapper .logo_wrapper .hamburger {width: 50px; cursor: pointer; display: none;}
+.nav__wrapper .logo_wrapper .hamburger > svg { cursor: pointer;}
+.nav__wrapper .interactive__board {  display: flex; align-items: center; justify-content: space-between; width:100%; padding: 0 50px; }
+.nav__wrapper .interactive__board .interactive__board__content {  display: flex; align-items: center; justify-content: space-between; column-gap: 16px; } 
+.nav__wrapper .interactive__board .interactive__board__content > svg {  cursor: pointer; } 
+.nav__wrapper .interactive__board .interactive__board__content .user__actions {  display: flex; align-items: center; justify-content: space-between; width:100%; column-gap: 8px; margin-left: 10px; } 
+.nav__wrapper .interactive__board .interactive__board__content .user__actions > img {  height: 48px; width: 48px; border: 2px solid $navy-blue; border-radius: 50px; } 
+.nav__wrapper .interactive__board .interactive__board__content .user__actions > svg {  cursor: pointer; } 
+.nav__wrapper .interactive__board .interactive__board__content .user__actions > h2 {  font-weight: normal; font-size: 14px; color:$navy-blue; } 
+
+@media screen and (max-width: 1024px) {
+    .nav__wrapper .logo_wrapper .hamburger { display: block;}
+    .nav__wrapper .logo_wrapper { display: flex; padding-left: 16px;}
+    .nav__wrapper .logo_wrapper > svg { width: 100px;}
+    .nav__wrapper .interactive__board { padding: 0 16px; }
+
+
+}
+
+@media screen and (max-width: 860px) {
+    .xm__hide { display: none !important;}
+    .nav__wrapper .interactive__board {justify-content: flex-end; }
+
+}
+
+@media screen and (max-width: 767px) {
+    .nav__wrapper .interactive__board { justify-content: flex-end;}
+    .xl__hide { display: none !important;}
+    .nav__wrapper .interactive__board .interactive__board__content > svg {  cursor: pointer; width: 37px; } 
+
+}
+

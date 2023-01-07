@@ -1,0 +1,16 @@
+.gen__btn__styles {
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  width: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.gen__btn__styles:hover {
+  opacity: 0.6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+/*# sourceMappingURL=button.css.map */

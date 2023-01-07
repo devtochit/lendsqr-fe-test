@@ -1,0 +1,26 @@
+@import '../../assets/styles/index.scss';
+
+.filters__wrapper { background: #FFFFFF; max-width: 270px; width: 100%; position: absolute; z-index: 3; top: 462px; left: 345px;
+    border: 1px solid rgba(84, 95, 125, 0.14); padding-bottom: 200px; margin-bottom: 300px;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px; padding: 30px 20px; }
+
+.input__class { all: unset;  width: calc(100% - 17px); padding: 10px 8px; color: $gray-hard !important; border: 1px solid $gray-soft; border-radius: 5px;  margin-top: 6px; margin-bottom: 24px; }
+.select__class { all: unset;  width: calc(100% - 17px); padding: 12px 18px 0 18px; color: $gray-hard !important; border: 1px solid $gray-soft; border-radius: 5px;  margin-top: 6px; margin-bottom: 24px; }
+.label__class {color: $gray-hard}
+.filter__cta { display: flex; align-items: center; column-gap: 14px;}
+.filter__cta .filter__styles { background: $cyan-main; color: $white-main; padding: 11px 0; }
+.filter__cta .reset__styles { background: $white-main; color: $navy-blue; padding: 11px 0; border: 1px solid $navy-blue }
+
+.filters__wrapper .dropbox { max-width: 100%; width: 100%; position: relative; }
+.filters__wrapper .selected {cursor: pointer; display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 8px; color: $gray-hard !important; border: 1px solid $gray-soft; border-radius: 5px; height: 40px; margin-top: 6px; margin-bottom: 24px; }
+.filters__wrapper .options { position: absolute; top: 36px; left: 0; box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04); border-radius: 3px; width: 100%; background: $white-main;}
+.filters__wrapper .options > p { &:hover{ background: $gray-soft; transition: 0.3s; cursor: pointer;} color: $navy-blue; padding:8px 4px 8px 6px; border-bottom: 1px solid $gray-soft;}
+
+
+@media screen and (max-width: 1023px) {
+    .filters__wrapper { top: 462px; left: 35px; }
+}
+@media screen and (max-width: 767px) {
+    .filters__wrapper { top: 532px; left: 35px; }
+}

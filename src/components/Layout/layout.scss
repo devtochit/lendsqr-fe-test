@@ -1,0 +1,10 @@
+.layout__wrapper .children__display {background: #f7f6f68c; min-height: 100vh; margin-bottom: 30px; padding-left: 330px; padding-top: 130px; padding-right: 52px; }
+
+
+@media screen and (max-width:1024px) {
+    .layout__wrapper .children__display { padding-left: 16px; padding-right: 16px;}
+}
+
+@media screen and (max-width: 767px) {
+    .layout__wrapper .children__display { padding-top: 110px;}
+}

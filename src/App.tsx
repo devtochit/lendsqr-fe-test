@@ -1,11 +1,13 @@
 import React from 'react';
+import UserComponent from './screens';
 // import './App.scss';
 import Login from './screens/Login';
+import Users from './screens/Users';
 
 function App() {
   return (
     <div>
-    <Login />
+    <UserComponent />
     {/* <div>Hello</div> */}
     </div>
   );
