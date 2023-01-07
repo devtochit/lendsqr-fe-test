@@ -24,7 +24,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div className='layout__wrapper'>
       <Navbar setIsNavOpen={setIsNavOpen} isNavOpen={isNavOpen}/>
-      <Sidebar isNavOpen={isNavOpen}/>
+      <Sidebar isNavOpen={isNavOpen} />
       <div className='children__display'>
       {children}
       </div>

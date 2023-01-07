@@ -1,19 +1,151 @@
 import CaretDownIcon from '../Icons/CaretDownIcon'
 import Suitcase from '../Icons/Suitcase'
-import { animationRightVariant, navLinks } from '../../utils/data'
-import '../Sidebar/sidebar.scss'
+import { animationRightVariant,navLinks } from '../../utils/data'
+import './sidebar.scss'
 import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
+navLinks.filter((val => val.category.includes('customer'))).map((navlink, i) => (
+    console.log(navlink.icon)
+  ))
 interface Props {
   isNavOpen: boolean
 }
-
 const index = ({ isNavOpen }: Props) => {
   const isActiveStyle = {
     background: '#97fafa28',
     borderLeft: '3px solid #39CDCC',
   }
+
+const navLinks: { title: string; icon: string; href: string, category: string }[] = [
+    {
+        title: 'Dashboard',
+        href: '/dashboard',
+        icon: './dashboard.png',
+        category: 'dashboard',
+    },
+    {
+        title: 'Users',
+        href: '/users',
+        icon: './users.png',
+        category: 'customer',
+    },
+    {
+        title: 'Guarantors',
+        href: '/#&',
+        icon: './guarantor.png',
+        category: 'customer',
+    },
+    {
+        title: 'Loans',
+        href: '/#&',
+        icon: './loans.png',
+        category: 'customer',
+    },
+    {
+        title: 'Decision Models',
+        href: '/#&',
+        icon: './decision.png',
+        category: 'customer',
+    },
+    {
+        title: 'Savings',
+        href: '/#&',
+        icon: './savings.png',
+        category: 'customer',
+    },
+    {
+        title: 'Loan Requests',
+        href: '/#&',
+        icon: './loanRequest.png',
+        category: 'customer',
+    },
+    {
+        title: 'Whitelist',
+        href: '/#&',
+        icon: './whitelist.png',
+        category: 'customer',
+    },
+    {
+        title: 'Karma',
+        href: '/#&',
+        icon: './karma.png',
+        category: 'customer',
+    },
+    {
+        title: 'Organization',
+        href: '/#&',
+        icon: './organization.png',
+        category: 'business',
+    },
+    {
+        title: 'Loan Products',
+        href: '/#&',
+        icon: './loanProducts.png',
+        category: 'business',
+    },
+    {
+        title: 'Savings Products',
+        href: '/#&',
+        icon: './savingsProducts.png',
+        category: 'business',
+    },
+    {
+        title: 'Fees and Charges',
+        href: '/#&',
+        icon: './feesAndCharges.png',
+        category: 'business',
+    },
+    {
+        title: 'Transactions',
+        href: '/#&',
+        icon: './transactions.png',
+        category: 'business',
+    },
+    {
+        title: 'Services',
+        href: '/#&',
+        icon: './services.png',
+        category: 'business',
+    },
+    {
+        title: 'Service Account',
+        href: '/#&',
+        icon: './serviceAccount.png',
+        category: 'business',
+    },
+    {
+        title: 'Settlements',
+        href: '/#&',
+        icon: './settlements.png',
+        category: 'business',
+    },
+    {
+        title: 'Reports',
+        href: '/#&',
+        icon: './reports.png',
+        category: 'business',
+    },
+    {
+        title: 'Preferences',
+        href: '/#&',
+        icon: './preferences.png',
+        category: 'settings',
+    },
+    {
+        title: 'Fees and Pricing',
+        href: '/#&',
+        icon: './feesAndPricing.png',
+        category: 'settings',
+    },
+    {
+        title: 'Audit Logs',
+        href: '/#&',
+        icon: './auditLogs.png',
+        category: 'settings',
+    },
+  ]
+
 
   const navLinkSequence = (i: number, navlink: any) => (
     <motion.span
@@ -24,7 +156,7 @@ const index = ({ isNavOpen }: Props) => {
       <NavLink to={navlink.href} className='navlinks'
         style={({ isActive }) => isActive ? isActiveStyle : undefined}
       >
-        <img src={navlink.icon} alt={`${navlink.title}_icon_group`} />
+        <img src={require(`${navlink.icon}`)} alt={`${navlink.title}_icon_group`} />
         <p>{navlink.title}</p>
       </NavLink>
     </motion.span>

@@ -21,11 +21,11 @@ const index = ({isNavOpen, setIsNavOpen }: Props) => {
             <Searchbar />
           </div>
           <div className='interactive__board__content'>
-            <div className='xl__hide'><a href="https://github.com/Keys78/lendsqr-fe-test" target={'_blank'}>Docs</a></div>
+            <div className='xl__hide'><a href="https://github.com/Layoolar/lendsqr-fe-test" target={'_blank'}>Docs</a></div>
             <BellIcon />
             <div className='user__actions'>
-              <img src={'./images/user.png'} alt="user__icon" />
-              <h2 className=' xm__hide'>{'Emmanuel'}</h2>
+              <img src={require('./profile__user.png')} alt="user__icon" />
+              <h2 className=' xm__hide'>{'Olayiwola'}</h2>
               <span className='xm__hide'><CaretDownIcon /></span>
             </div>
           </div>

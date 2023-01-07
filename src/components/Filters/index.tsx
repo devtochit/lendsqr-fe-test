@@ -10,6 +10,7 @@ import {
     filterByActiveStatus, filterByPendingStatus, filterByInactveStatus, filterByBlacklistStatus
 } from '../../features/users/usersSlice'
 import CaretDownIcon from '../../components/Icons/CaretDownIcon'
+import { characterLimit } from '../../utils/helpers'
 
 
 interface IFilter {
@@ -37,7 +38,6 @@ const Index = ({ setIsFilterModal, currentUsers }: IFilter) => {
     const filterByEmailAction = () => { dispatch(filterByEmail(emailRef.current?.value)) };
     const filterByDateJoinedAction = () => { dispatch(filterByDateJoined(dateRef.current?.value)) };
     const filterByPhoneNumberAction = () => { dispatch(filterByPhoneNumber(phoneRef.current?.value)) };
-
 
     const updateVal = (val: any) => {
         setSelcted(prev => val.orgName)
