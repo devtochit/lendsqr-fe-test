@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Lendsqr Frontend Test
+This project was completed as an assessment test for the role of Frontend Engineer at [Lendsqr](https://www.lendsqr.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project was bootstrapped with 
 
-In the project directory, you can run:
+[React App](https://reactjs.org/),
 
-### `npm start`
+[Typescript](https://www.typescriptlang.org/) 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Sass](https://sass-lang.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This is a project to create a loan company's admin panel, following this [design](https://www.figma.com/file/ZKILoCoIoy1IESdBpq3GNC/Lendsqr-Frontend-Engineering-Assessment?node-id=5530%3A2599&t=Uu2BAy5Y0FDHy5Tw-0) and integrating with the mock endpoints:
 
-### `npm test`
+ - [https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users](https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users)
+ - [https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/:id](https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/:id)
+ 
+ Some of the other technologies used:
+ - [React Router](https://github.com/remix-run/react-router)
+ - [Axios](https://github.com/axios/axios)
+ 
+ # About Lendsqr
+ 
+Lendsqr is Lending-as-a-Service Solution which powers lenders to build, launch, and scale their digital lending business across multiple channels, at the lowest cost.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We provide our lenders from various industries with a cloud lending platform to make the activities of your LaaS business run smoothly by implementing novel solutions and superior domain expertise. We’re passionate about making lenders succeed.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Result
+ 
