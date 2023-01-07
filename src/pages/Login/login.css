@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.login__wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 50px auto 0 auto;
+  padding: 0 67px;
+}
+
+.login__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 79px;
+}
+
+.login__content > div {
+  max-width: 447px;
+  width: 100%;
+}
+
+.login__content > div > h1 {
+  font-size: 40px;
+  color: #213F7D;
+}
+
+.login__content > div > article {
+  font-size: 20px;
+  color: #545F7D;
+  padding: 25px 0 60px 0;
+}
+
+.login__content > div .input__styles {
+  all: unset;
+  width: calc(100% - 36px);
+  padding: 0 18px;
+  color: #545F7D !important;
+  border: 1px solid #545F7D26;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 24px;
+}
+
+.login__content > div > form .forgot__password {
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+.login__content > div > form .forgot__password > a {
+  text-decoration: none;
+  color: #39CDCC;
+  text-transform: uppercase;
+}
+
+.login__content > div > form .bg__cyan {
+  background: #39CDCC;
+  color: #fff;
+}
+
+.login__content > div > form .text__transform {
+  text-transform: uppercase;
+}
+
+.login__content > div > form .btn__padding {
+  padding: 16px 0;
+}
+
+.login__content > div > form .password__styles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 18px;
+  color: #545F7D !important;
+  border: 1px solid #545F7D26;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 24px;
+}
+
+.login__content > div > form .password__styles > .input__styles {
+  all: unset;
+  width: 100%;
+}
+
+.login__content > div > form .password__styles > span {
+  color: #39CDCC;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .login__wrapper {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login__content > svg {
+    display: none;
+  }
+  .login__content > div {
+    max-width: 100%;
+  }
+  .login__content > div > h1 {
+    font-size: 28px;
+  }
+  .login__content > div > article {
+    font-size: 16px;
+    padding: 15px 0 30px 0;
+  }
+}
+/*# sourceMappingURL=login.css.map */
