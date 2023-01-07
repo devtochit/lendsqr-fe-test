@@ -1,6 +1,6 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getYearsRange } from '../constants/utils/dateUtil'
-import getUsers from './getUsers'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { getYearsBetween } from '../constants/utils/helpers';
+import usersService from './usersService'
 
 const initialState = {
   allUsers: [],
@@ -18,7 +18,7 @@ export const getAllUsers = createAsyncThunk(
   'users',
   async (_, thunkAPI) => {
     try {
-      return await getUsers.getAllUsers()
+      return await usersService.getAllUsers()
     } catch (error: any) {
       const message =
         (error.response &&
@@ -36,7 +36,7 @@ export const getUserById = createAsyncThunk(
   'users/:id',
   async (id: any, thunkAPI,) => {
     try {
-      return await getUsers.getUserById(id)
+      return await usersService.getUserById(id)
     } catch (error: any) {
       const message =
         (error.response &&
@@ -84,19 +84,19 @@ export const usersSlice = createSlice({
     },
     filterByActiveStatus: (state, action) => {
       state.filteredUsers = state.allUsers.filter((user: any) =>
-        getYearsRange(user.createdAt, user.lastActiveDate) <= (40))
+        getYearsBetween(user.createdAt, user.lastActiveDate) <= (40))
     },
     filterByPendingStatus: (state, action) => {
       state.filteredUsers = state.allUsers.filter((user: any) =>
-        getYearsRange(user.createdAt, user.lastActiveDate) > (40) && getYearsRange(user.createdAt, user.lastActiveDate) <= (60))
+        getYearsBetween(user.createdAt, user.lastActiveDate) > (40) && getYearsBetween(user.createdAt, user.lastActiveDate) <= (60))
     },
     filterByInactveStatus: (state, action) => {
       state.filteredUsers = state.allUsers.filter((user: any) =>
-        getYearsRange(user.createdAt, user.lastActiveDate) > (60) && getYearsRange(user.createdAt, user.lastActiveDate) <= (90))
+        getYearsBetween(user.createdAt, user.lastActiveDate) > (60) && getYearsBetween(user.createdAt, user.lastActiveDate) <= (90))
     },
     filterByBlacklistStatus: (state, action) => {
       state.filteredUsers = state.allUsers.filter((user: any) =>
-        getYearsRange(user.createdAt, user.lastActiveDate) > (90))
+        getYearsBetween(user.createdAt, user.lastActiveDate) > (90))
     },
   },
 

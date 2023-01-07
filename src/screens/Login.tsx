@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import LogoIcon from '../constants/LogoIcon'
-import LoginIcon from '../constants/LoginIcon'
+import LogoIcon from '../constants/icons/LogoIcon'
+import LoginIcon from '../constants/icons/LoginIcon'
 import '../saas/Login/login.scss'
 // import { useNavigate } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast';
