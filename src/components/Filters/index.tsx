@@ -1,15 +1,15 @@
-import Input from 'components/Shared/Input'
-import Button from 'components/Shared/Button/Index'
-import useOnClickOutside from 'hooks/useOnClickOutside'
+import Input from '../../components/Shared/Input'
+import Button from '../../components/Shared/Button/Index'
+import useOnClickOutside from '../../hooks/useOnClickOutside'
 import { useRef, useState } from 'react'
 import '../Filters/filters.scss'
-import { useAppDispatch } from 'app/hooks'
+import { useAppDispatch } from '../../app/hooks'
 import { motion } from 'framer-motion'
 import {
     getAllUsers, filterByUsername, filterByEmail, filterByDateJoined, filterByPhoneNumber, filterByOrgName,
     filterByActiveStatus, filterByPendingStatus, filterByInactveStatus, filterByBlacklistStatus
-} from 'features/users/usersSlice'
-import CaretDownIcon from 'components/Icons/CaretDownIcon'
+} from '../../features/users/usersSlice'
+import CaretDownIcon from '../../components/Icons/CaretDownIcon'
 
 
 interface IFilter {

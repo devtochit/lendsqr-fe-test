@@ -3,7 +3,7 @@
     "mappings": "ACAA,OAAO,CAAC,+GAAI;AACZ,AAAA,CAAC,CAAA;EAAE,OAAO,EAAE,CAAC;EAAE,MAAM,EAAE,CAAC;EAAE,UAAU,EAAE,UAAU;CAAG;;AASnD,AAAA,IAAI,CAAC;EAAE,WAAW,EAAE,uBAAuB;CAAG;;ADT9C,AAAA,aAAa,CAAC;EAAC,MAAM,EAAE,GAAG,CAAC,KAAK,CCIrB,OAAO;CDJ4B",
     "sources": [
         "navbar.scss",
-        "../../assets/styles/index.scss"
+        "../../../../assets/styles/index.scss"
     ],
     "names": [],
     "file": "navbar.css"

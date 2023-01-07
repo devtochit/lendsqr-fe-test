@@ -1,15 +1,15 @@
 import { lazy } from 'react'
-import ActiveUsersIcon from 'components/Icons/ActiveUsersIcon';
-import UserLoansIcon from 'components/Icons/UserLoansIcon';
-import UserSavings from 'components/Icons/UserSavings';
-import UsersIcon from 'components/Icons/UsersIcon';
-import { useAppDispatch, useAppSelector } from 'app/hooks';
+import ActiveUsersIcon from '../../components/Icons/ActiveUsersIcon';
+import UserLoansIcon from '../../components/Icons/UserLoansIcon';
+import UserSavings from '../../components/Icons/UserSavings';
+import UsersIcon from '../../components/Icons/UsersIcon';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import '../Users/users.scss'
 import { useEffect } from 'react';
-import { getAllUsers } from 'features/users/usersSlice';
-import { getYearsBetween } from 'utils/helpers';
-import Loader from 'components/Loader/index';
-const UserCards = lazy(() => import('components/UserCards/index'));
+import { getAllUsers } from '../../features/users/usersSlice';
+import { getYearsBetween } from '../../utils/helpers';
+import Loader from '../../components/Loader/index';
+const UserCards = lazy(() => import('../../components/UserCards/index'));
 const UsersTable = lazy(() => import('./UsersTable'));
  
 

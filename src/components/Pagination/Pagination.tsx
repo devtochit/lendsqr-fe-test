@@ -1,5 +1,5 @@
-import NextBtn from 'components/Icons/NextBtn';
-import PrevBtn from 'components/Icons/PrevBtn';
+import NextBtn from '../../components/Icons/NextBtn';
+import PrevBtn from '../../components/Icons/PrevBtn';
 import { getPaginationItems } from '../Pagination/lib/pagination';
 import PageLink from './PageLink';
 import './Pagination.scss';

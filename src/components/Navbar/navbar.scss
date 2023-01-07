@@ -1,4 +1,4 @@
-@import 'assets/styles/index.scss';
+@import '../../assets/styles/index.scss';
 
 .nav__wrapper { background: $white-main; display: flex; align-items: center; padding: 20px 0; box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04); position: fixed; z-index: 9; top: 0; width: 100%;} 
 .nav__wrapper .logo_wrapper { max-width: 283px; width: 100%; padding-left: 30px;}
