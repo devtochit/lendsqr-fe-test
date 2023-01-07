@@ -9,6 +9,6 @@ import { useState, useRef } from 'react';
 import { characterLimit, formatDate, getYearsBetween  } from "../constants/utils/helpers"
 import Listener from '../hooks/Listener';
 import { motion } from 'framer-motion';
-import CaretDownIcon from "../constants/icons/CaretDownIcon"
+import CaretDownIcon from "../constants/icons/CaretDownIcon";
 
 
