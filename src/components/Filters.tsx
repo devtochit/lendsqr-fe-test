@@ -17,7 +17,7 @@ interface IFilter {
     currentUsers: any,
 }
 
-const Filter = ({ setIsFilterModal, currentUsers }: IFilter) => {
+const Filters = ({ setIsFilterModal, currentUsers }: IFilter) => {
     const filterModalRef = useRef<HTMLDivElement>(null);
     const clickOutsidehandler = () => { setIsFilterModal(false) };
     Listener(filterModalRef, clickOutsidehandler);
@@ -98,4 +98,4 @@ const Filter = ({ setIsFilterModal, currentUsers }: IFilter) => {
     )
 }
 
-export default Filter;
+export default Filters;
