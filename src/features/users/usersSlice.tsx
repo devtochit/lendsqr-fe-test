@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getYearsBetween } from 'utils/helpers'
+import { getYearsBetween } from '../../utils/helpers'
 import usersService from './usersService'
 
 const initialState = {

@@ -1,8 +1,8 @@
-import BellIcon from 'components/Icons/BellIcon'
-import CaretDownIcon from 'components/Icons/CaretDownIcon'
-import Hamburger from 'components/Icons/Hamburger'
-import LogoIcon from 'components/Icons/LogoIcon'
-import Searchbar from 'components/Shared/Searchbar/Index'
+import BellIcon from '../Icons/BellIcon'
+import CaretDownIcon from '../Icons/CaretDownIcon'
+import Hamburger from '../Icons/Hamburger'
+import LogoIcon from '../Icons/LogoIcon'
+import Searchbar from '../Shared/Searchbar/Index'
 import '../Navbar/navbar.scss'
 
 interface Props {

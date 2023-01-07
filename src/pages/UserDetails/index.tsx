@@ -1,13 +1,13 @@
-import ArrowBack from 'components/Icons/ArrowBack'
-import Tabs from 'components/CustomTabs/Tabs'
+import ArrowBack from '../../components/Icons/ArrowBack'
+import Tabs from '../../components/CustomTabs/Tabs'
 import '../UserDetails/userdetails.scss'
-import StarIcon from 'components/Icons/StarIcon'
-import Button from 'components/Shared/Button/Index'
+import StarIcon from '../../components/Icons/StarIcon'
+import Button from '../../components/Shared/Button/Index'
 import { useNavigate, useParams } from 'react-router-dom'
-import { getUserById } from 'features/users/usersSlice';
+import { getUserById } from '../../features/users/usersSlice';
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from 'app/hooks'
-import { characterLimit } from 'utils/helpers'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { characterLimit } from '../../utils/helpers'
 
 
 

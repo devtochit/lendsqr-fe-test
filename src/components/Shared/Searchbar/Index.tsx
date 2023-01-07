@@ -1,6 +1,6 @@
 import '../Searchbar/searchbar.scss'
 import Input from '../Input'
-import SearchIcon from 'components/Icons/SearchIcon'
+import SearchIcon from '../../Icons/SearchIcon'
 
 
 const Index = () => {

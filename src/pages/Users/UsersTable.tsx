@@ -1,17 +1,17 @@
-import ActivateUserIcon from 'components/Icons/ActivateUserIcon';
-import BlackListIcon from 'components/Icons/BlackListIcon';
-import Ellipsis from 'components/Icons/Ellipsis';
-import EyeIcon from 'components/Icons/EyeIcon';
-import SortIcon from 'components/Icons/SortIcon';
-import Filters from 'components/Filters/index'
+import ActivateUserIcon from '../../components/Icons/ActivateUserIcon';
+import BlackListIcon from '../../components/Icons/BlackListIcon';
+import Ellipsis from '../../components/Icons/Ellipsis';
+import EyeIcon from '../../components/Icons/EyeIcon';
+import SortIcon from '../../components/Icons/SortIcon';
+import Filters from '../../components/Filters/index'
 import { useState, useRef } from 'react';
-import { headings } from 'utils/data';
-import { characterLimit, formatDate, getYearsBetween } from 'utils/helpers';
-import useOnClickOutside from 'hooks/useOnClickOutside';
+import { headings } from '../../utils/data';
+import { characterLimit, formatDate, getYearsBetween } from '../../utils/helpers';
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 import { motion } from 'framer-motion';
 import '../Users/users.scss'
-import Pagination from 'components/Pagination/Pagination';
-import CaretDownIcon from 'components/Icons/CaretDownIcon';
+import Pagination from '../../components/Pagination/Pagination';
+import CaretDownIcon from '../../components/Icons/CaretDownIcon';
 
 
 interface Props {

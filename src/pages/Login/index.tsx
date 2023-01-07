@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import LoginIllustration from 'components/Icons/LoginIllustration'
-import LogoIcon from 'components/Icons/LogoIcon'
-import Input from 'components/Shared/Input'
-import Button from 'components/Shared/Button/Index'
+import LoginIllustration from '../../components/Icons/LoginIllustration'
+import LogoIcon from '../../components/Icons/LogoIcon'
+import Input from '../../components/Shared/Input'
+import Button from '../../components/Shared/Button/Index'
 import '../Login/login.scss'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
