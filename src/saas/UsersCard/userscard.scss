@@ -1,0 +1,41 @@
+@import '../index.scss';
+
+.card-container { height: 180px; 
+    padding: 20px 12px 30px 30px; 
+    border: 1px solid rgba(33, 63, 125, 0.06); 
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04); 
+    border-radius: 4px; 
+    max-width: 240px; 
+    width: 100%; 
+    background: $white-color;
+
+    h1 {
+       font-weight: normal; 
+       font-size: 14px; 
+       color: $navy-blue; 
+       padding: 13px 0; 
+       text-transform: uppercase; 
+       font-weight: 500; 
+    }
+
+    h2 {
+        font-weight: normal; 
+        font-size: 24px; 
+        color: $navy-blue; 
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card-container { 
+        max-width: 100%; 
+        margin-bottom: 12px; 
+        height:150px; 
+        padding: 16px 12px 16px 16px
+    
+        h2 { 
+            font-size: 20px;
+        } 
+    }
+    
+}

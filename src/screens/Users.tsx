@@ -1,4 +1,4 @@
-import { lazy, useEffect } from 'react'
+import React, { lazy, useEffect } from 'react'
 import ActiveUsersIcon from '../constants/icons/ActivateUserIcon';
 import UserLoansIcon from '../constants/icons/UserLoansIcon';
 import UserSavingsIcon from '../constants/icons/UserSavingsIcon';
@@ -7,8 +7,9 @@ import { useAppDispatch, useAppSelector } from '../hooks/hooks';
 import '../saas/Users/users.scss'
 import { getAllUsers } from '../functions/usersSlice';
 import { getYearsBetween } from '../constants/utils/helpers';
+import UsersCard from '../components/constants/UsersCard';
+import Loading from '../components/constants/Loading';
 
-import React from 'react'
 
 export default function Users() {
     const dispatch = useAppDispatch()
@@ -42,19 +43,18 @@ export default function Users() {
     },
     {
       title: 'users with savings',
-      icon: <UserSavings />,
+      icon: <UserSavingsIcon />,
       data: getUsersWithSaving.length || 0
     },
   ]
 
   const renderCards = cardInfo.map((card, i) => (
-    <UserCards  key={i} i={i} card={card} />
+    <UsersCard  key={i} i={i} card={card} />
   ))
-
 
   return (
     <div>
-      {isLoading && <Loader />}
+      {isLoading && <Loading />}
       {isError && <span>{message}</span>}
       {!isError &&
         <div className='users__wrapper'>
