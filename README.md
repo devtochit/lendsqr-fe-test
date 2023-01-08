@@ -27,3 +27,4 @@ We provide our lenders from various industries with a cloud lending platform to 
 
 # Result
  
+ - [Home Page](https://olayiwola-ayoola-lendsqr-fe-test.netlify.app/)
