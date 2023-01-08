@@ -19,7 +19,7 @@ const Layout = ({ children }: Props) => {
   useEffect(() => {
     window.innerWidth > 1024 &&  setIsNavOpen(true)
     window.addEventListener("resize", handleResize)
-  })
+  }, [])
 
   return (
     <div className='layout__wrapper'>
