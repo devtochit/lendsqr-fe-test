@@ -27,4 +27,6 @@ We provide our lenders from various industries with a cloud lending platform to 
 
 # Result
  
- - [Home Page](https://olayiwola-ayoola-lendsqr-fe-test.netlify.app/)
+ - [Home Page](https://olayiwola-ayoola-lendsqr-fe-test.vercel.app/)
+ - [Users](https://olayiwola-ayoola-lendsqr-fe-test.vercel.app/users)
+ - Click on the ellipsis next to each user to view details --- This is to make copying of details easier. 
