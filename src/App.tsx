@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Layout children={<Dashboard />} />} />
+          <Route path="/dashboard" element={<Layout children={<Users />} />} />
           <Route path="/users" element={<Layout children={<Users />} />} />
           <Route path="/users/:id" element={<Layout children={<UserDetails />} />} />
         </Routes>
