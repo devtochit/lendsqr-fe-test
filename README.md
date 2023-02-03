@@ -1,5 +1,5 @@
-# Lendsqr Frontend Test
-This project was completed as an assessment test for the role of Frontend Engineer at [Lendsqr](https://www.lendsqr.com/)
+
+This project is an admin dashboard for a loan company where admin can manage users. 
 
 
 This project was bootstrapped with 
