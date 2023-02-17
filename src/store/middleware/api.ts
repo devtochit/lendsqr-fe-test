@@ -23,12 +23,12 @@ const api =
     try {
       const response = await axios.request({
         method,
-        baseURL: "https://web-production-d5b0.up.railway.app/",
+        baseURL: "http://localhost:1338/",
         url,
         params: params,
         data,
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
           Authorization: extraheaders,
         },
       });

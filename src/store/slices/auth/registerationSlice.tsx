@@ -38,7 +38,7 @@ export default registrationSlice.reducer;
 export const register = (userData: any) => (dispatch: AppDispatch) => {
   dispatch(
     apiCallBegan({
-      url: PRE_URL + "/auth/register",
+      url:"/api/register",
       method: "post",
       data: userData,
       onStart: registrationRequested.type,

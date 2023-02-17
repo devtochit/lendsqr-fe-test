@@ -44,8 +44,9 @@ const Index = () => {
   };
 
   const handleSubmit = async (values: LoginValues, { setSubmitting, resetForm }: { setSubmitting: (isSubmitting: boolean) => void; resetForm: () => void }) => {
-    try {
-      await dispatch(login(values));
+    try {      
+      const { email, password } = values;
+    await dispatch(login(values));
       navigate('/dashboard');
     } catch {
       toast.error("Incorrect email or password");
@@ -69,22 +70,18 @@ const Index = () => {
               <Form>
                 <Field
                   name='email'
-                  component={Input}
                   type='email'
                   placeholder='Email'
-                  input__class='input__styles'
+                  className ='input__styles'
                 />
                 <ErrorMessage name='email' render={msg => <div className="error">{msg}</div>} />
 
                 <Field
                   name='password'
-                  component={Input}
-                  type={inputType}
+                  type='password'
                   placeholder='Password'
-                  input__class='input__styles'
-                  variable_x={!isVisible ? 'SHOW' : 'HIDE'}
-                  onClick={handleToggle}
-                  component__wrap='password__styles'
+                  className='input__styles'
+                  
                 />
                 <ErrorMessage name='password' render={msg => <div className="error">{msg}</div>} />
 

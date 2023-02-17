@@ -45,7 +45,7 @@ export const login = (loginDetails: any) => (dispatch: AppDispatch) => {
   console.log("loginDetails", loginDetails);
   dispatch(
     apiCallBegan({
-      url: PRE_URL + "auth/login/",
+      url:"api/login/",
       method: "post",
       data: loginDetails,
       onStart: loginRequested.type,
