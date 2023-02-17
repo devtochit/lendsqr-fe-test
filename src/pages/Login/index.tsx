@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 import LoginIllustration from '../../components/Icons/LoginIllustration'
 import LogoIcon from '../../components/Icons/LogoIcon'
 import Input from '../../components/Shared/Input'
@@ -6,47 +8,52 @@ import Button from '../../components/Shared/Button/Index'
 import '../Login/login.scss'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
+import { login } from "../../store/slices/auth/loginSlice";
+import { useAppDispatch } from "../../store/hooks";
 
+const LoginSchema = Yup.object().shape({
+  email: Yup.string().email("Email is invalid").required("Please enter your email"),
+  password: Yup.string().required("Please enter your password"),
+});
+
+interface LoginValues {
+  email: string;
+  password: string;
+}
 
 const Index = () => {
-  const navigate = useNavigate()
-  const initialValues = {
-    email: "",
-    password: ""
-  };
-
-  const [values, setValues] = useState<any>(initialValues);
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [inputType, setInputType] = useState<string>('password');
-
-  const onHandleInputChange = (e: any) => {
-    const { name, value } = e.target;
-    setValues({
-      ...values,
-      [name]: value,
-    });
-  };
+  
+  const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(false);
+  const [inputType, setInputType] = useState('password');
+  const dispatch = useAppDispatch();
 
   const handleToggle = () => {
     if(inputType === "password") {
-        setInputType('text')
-        setIsVisible(!isVisible)
+      setInputType('text')
+      setIsVisible(!isVisible)
     } else {
       setInputType('password')
       setIsVisible(!isVisible)
     }
   }
 
-  const loginAction = (e: any) => {
-    e.preventDefault();
+  const initialValues: LoginValues = {
+    email: "",
+    password: "",
+  };
 
-    if(values.email === "" || values.password === "") {
-      return toast.error("fields can't be empty")
+  const handleSubmit = async (values: LoginValues, { setSubmitting, resetForm }: { setSubmitting: (isSubmitting: boolean) => void; resetForm: () => void }) => {
+    try {
+      await dispatch(login(values));
+      navigate('/dashboard');
+    } catch {
+      toast.error("Incorrect email or password");
+    } finally {
+      setSubmitting(false);
+      resetForm();
     }
-
-    navigate('/dashboard')
-  }
-
+  };
   
 
   return (
@@ -57,35 +64,45 @@ const Index = () => {
         <div>
           <h1>Welcome!</h1>
           <article>Enter details to login.</article>
-          <form onSubmit={e => loginAction(e)}>
-            <Input
-              name={'email'}
-              value={values.email}
-              type='email'
-              onHandleInputChange={(e) => onHandleInputChange(e)}
-              placeholder={'Email'}
-              input__class={'input__styles'}
-            />
-            <Input
-              name={'password'}
-              value={values.password}
-              type={inputType}
-              onHandleInputChange={(e) => onHandleInputChange(e)}
-              placeholder={'Password'}
-              input__class={'input__styles'}
-              variable_x={!isVisible ? 'SHOW' : 'HIDE'}
-              onClick={handleToggle}
-              component__wrap={'password__styles'}
-            />
-            <div className='forgot__password'>
-              <a href="#">Forgot Password</a>
-            </div>
-            <Button children={'Log In'} type="submit" background={'bg__cyan'} text_transform={'text__transform'} padding={'btn__padding'} />
-          </form>
+          <Formik initialValues={initialValues} validationSchema={LoginSchema} onSubmit={handleSubmit}>
+            {({ isSubmitting }) => (
+              <Form>
+                <Field
+                  name='email'
+                  component={Input}
+                  type='email'
+                  placeholder='Email'
+                  input__class='input__styles'
+                />
+                <ErrorMessage name='email' render={msg => <div className="error">{msg}</div>} />
+
+                <Field
+                  name='password'
+                  component={Input}
+                  type={inputType}
+                  placeholder='Password'
+                  input__class='input__styles'
+                  variable_x={!isVisible ? 'SHOW' : 'HIDE'}
+                  onClick={handleToggle}
+                  component__wrap='password__styles'
+                />
+                <ErrorMessage name='password' render={msg => <div className="error">{msg}</div>} />
+
+                <div className='forgot__password'>
+                  <a href="#">Forgot Password</a>
+                </div>
+
+                <Button children={'Log In'} type="submit" background={'bg__cyan'} text_transform={'text__transform'} padding={'btn__padding'}
+                 disabled={isSubmitting} 
+                 />
+
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
     </section>
   )
 }
 
-export default Index
+export default Index;

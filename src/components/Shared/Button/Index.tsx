@@ -3,6 +3,7 @@ import '../Button/button.scss'
 
 interface Props {
     children: any,
+    disabled?:boolean,
     background?: string,
     color?: string,
     text_transform?: string

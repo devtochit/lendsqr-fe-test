@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Login, Dashboard, Users, UserDetails } from "./pages";
+import { Login,Registration, Dashboard, Users, UserDetails } from "./pages";
 import { ToastContainer } from 'react-toastify';
 import Layout from "./components/Layout";
 import { Suspense } from 'react'
@@ -15,10 +15,10 @@ function App() {
       <ToastContainer />
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Layout children={<Users />} />} />
-          <Route path="/users" element={<Layout children={<Users />} />} />
-          <Route path="/users/:id" element={<Layout children={<UserDetails />} />} />
+          <Route path="/" element={<Registration />} />
+          {/* <Route path="/dashboard" element={<Layout children={<Users />} />} /> */}
+          {/* <Route path="/users" element={<Layout children={<Users />} />} /> */}
+          {/* <Route path="/users/:id" element={<Layout children={<UserDetails />} />} /> */}
         </Routes>
       </Router>
     </Suspense>
